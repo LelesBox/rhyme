@@ -1,0 +1,33 @@
+{
+  "name": "rhyme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "test-cov": "node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "debug": "devtool app.js --watch -- entry"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "colors": "^1.1.2",
+    "koa": "^1.1.2",
+    "koa-body": "^1.4.0",
+    "koa-ejs": "^3.0.0",
+    "koa-generic-session": "^1.10.1",
+    "koa-redis": "^2.0.1",
+    "koa-router": "^5.3.0",
+    "koa-send": "^3.1.0",
+    "koa-session": "^3.3.1",
+    "koa-static": "git+https://github.com/LelesBox/static.git",
+    "sails-mongo": "^0.11.6",
+    "waterline": "^0.10.30"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.2",
+    "mocha": "^2.3.4",
+    "supertest": "^1.1.0"
+  }
+}
