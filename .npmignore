@@ -3,7 +3,6 @@ build
 config
 controller
 filter
-lib
 model
 router
 node_modules
