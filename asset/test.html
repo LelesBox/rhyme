@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+
+    <title>Connect with Fitbit</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="keywords" content="keywords"/>
+    <meta name="viewport" content="width=1075"/>
+
+
+
+    <script type="text/javascript">
+        window.onerror = function (msg) {
+            var headEl = document.getElementsByTagName("head")[0];
+            headEl.setAttribute("data-js-error", msg);
+        }
+    </script>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="https://assets.fitbit.com/production/app.api.oauth.oauthBasePage.0.css.44caee2d692e1bd49d53ee0f199ce49d.css" charset="utf-8"/>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="https://assets.fitbit.com/production/app.api.oauth.oauthBasePage.1.js.e20a38e65e1ee00b66427a45b2bc5fa2.js" charset="utf-8"></script>
+    <![endif]-->
+    <!--[if lte IE 7]>
+    <link rel="stylesheet" type="text/css" href="https://assets.fitbit.com/production/app.api.oauth.oauthBasePage.2.css.33c7842eb65d665e9b2194a03f3e9009.css" charset="utf-8"/>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="https://assets.fitbit.com/production/app.api.oauth.oauthBasePage.3.css.674f3fae06d737fb5255ce6252616a83.css" charset="utf-8"/>
+
+    <script type="text/javascript" src="https://assets.fitbit.com/production/app.api.oauth.oauthBasePage.4.js.e282f99d70288fd8505e9323a857bd45.js" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        window.CW = {};
+        CW.fancyCheckboxRadio = function(container){
+            // Note: Should be applied inside backbone views separately
+            container = container || $("body");
+            var elems = container.find("input:checkbox, input:radio");
+            elems
+                    .each(function(){
+                        var el = $(this);
+                        if (el.data("fancy-control-done")) return;
+
+                        el
+                                .toggleClass("checked", el.prop("checked"))
+                                .data("fancy-control-done", true);
+
+                        $("<div class='fancy-control-helper'></div>").insertAfter(el);
+
+                        el.filter("input:checkbox").on("change.fancy", function(){
+                            el.toggleClass("checked", el.prop("checked"));
+                            if ($.browser.msie && $.browser.version === "8.0") {
+                                // IE8 fails to redraw control helper sometimes
+                                // Code below forces helper to redraw
+                                el.next(".fancy-control-helper").hide().show();
+                            }
+                        });
+
+                        el.filter("input:radio").on("change.fancy", function(){
+                            container.find("input:radio[name='" +el.attr("name")+ "']").toggleClass("checked", !el.prop("checked"));
+                            el.toggleClass("checked", el.prop("checked"));
+                        });
+                    });
+        };
+
+        $(function(){
+            CW.fancyCheckboxRadio($(document.body));
+            $("input[placeholder]").placeholder();
+            if ($(".error").length) {
+                $(document.body).click(function(){
+                    $(".error").hide();
+                });
+            }
+        });
+    </script>
+
+
+
+</head>
+
+<body class="">
+
+
+<script type="text/javascript">
+    // Here are list of domains tracking by GA
+    if (typeof _ga_tracking_domains == "undefined") {
+        var _ga_tracking_domains = ['blog.fitbit.com', 'help.fitbit.com'];
+    }
+</script>
+
+<div class="background"></div>
+<div class="preloader"><i></i></div>
+
+<div class="outer">
+    <div class="middle">
+        <table class="content no-promo">
+            <tr>
+                <td rowspan="2"><div class="spreader"></div></td>
+                <td class="main">
+
+
+
+                    <div class="pin-page">
+
+
+
+
+
+
+                        <img src="https://assets.fitbit.com/production/bg_branding_b.9ed5b5b82f01c65a997ac15ccdefbe6b.png" class="logo" width="114" height="28" alt="Fitbit"/>
+
+
+
+                        <h2>Access authorized</h2>
+
+                        <div class="info">
+                            You can return to Fitbit for iPhone and enter the following PIN when requested:
+                        </div>
+
+                        <div class="pincode gap20">ee0e31eeef28b208eb812a10e1e5007d</div>
+
+                    </div>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td class="main-footer">
+
+                    <div class="notice">You can revoke this application's access from your Fitbit account settings.</div>
+
+
+
+
+
+
+
+
+                    <div class="login-status">
+                        <div class="login-status-inner">
+                            <img src="https://static0.fitbit.com/images/profile/defaultProfile_32_male.gif"/>
+                            <div>
+                                Logged in as li_xiaoliang@foxmail.com.
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="https://assets.fitbit.com/production/app.includes.mixPanel.0.js.d89fe5d70ad446cfc2dd2f3efd2853dc.js" charset="utf-8"></script><script type="text/javascript" src="https://assets.fitbit.com/production/app.includes.mixPanel.1.js.73e36d01169c893ad6767d5ca62a75b4.js" charset="utf-8"></script><script type="text/javascript">
+
+
+    if (window.thirdPartyTrackingDisabled) {
+        window.mixpanel = [];
+        window.mixpanel.init = function () {
+        };
+        window.mixpanel.track = function () {
+        };
+    } else {
+
+        // clear out the large MP cookie so new smaller size cookie is put in
+        document.cookie = 'mp_mp_cookie=;expires=-1;path=/';
+
+        (function (c, a) {
+            window.mixpanel = a;
+            var b, d, h, e;
+            b = c.createElement("script");
+            b.type = "text/javascript";
+            b.async = !0;
+            b.src = ("https:" === c.location.protocol ? "https:" : "http:") +
+                    '//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';
+            d = c.getElementsByTagName("script")[0];
+            d.parentNode.insertBefore(b, d);
+            a._i = [];
+            a.init = function (b, c, f) {
+                function d(a, b) {
+                    var c = b.split(".");
+                    2 == c.length && (a = a[c[0]], b = c[1]);
+                    a[b] = function () {
+                        a.push([b].concat(
+                                Array.prototype.slice.call(arguments, 0)))
+                    }
+                }
+
+                var g = a;
+                "undefined" !== typeof f ? g = a[f] = [] :
+                        f = "mixpanel";
+                g.people = g.people || [];
+                h = ['disable', 'track', 'track_pageview', 'track_links',
+                    'track_forms', 'register', 'register_once', 'unregister', 'identify', 'alias', 'name_tag',
+                    'set_config', 'people.set', 'people.increment', 'people.track_charge', 'people.append'];
+                for (e = 0; e < h.length; e++)d(g, h[e]);
+                a._i.push([b, c, f])
+            };
+            a.__SV = 1.2;
+        })(document, window.mixpanel || []);
+    }
+
+
+
+    var mpqMasterPrj = "82d19845b298fcc8b8713861c9cf67c0";
+    var mpqSignupPrj = "6d8c58bf820d35c347bf4c80b85dfa87";
+    var mpqDashboardPrj = "f1d7f147cdb73c164d5e1e29f7cda229";
+    var mpqOrderPrj = "c3eb4cb5809febf58e295eecc018cede";
+    var mpqBadgesPrj = "fb8136a98d2f93dd1602e7c18ebada3e";
+    var mpqDevicesPrj = "36a318763296893f99f0328620b31720";
+    var mpqWebsitePrj = "0c603dde37e11848bf8ba55a855f9d1a";
+    var mpqSocialFeaturesPrj = "c7ba2a7fc10a15f9eb140af80c730653";
+    var mpqCWPrj = "2a509160f60d33578a765e88afebee24";
+    var mpqSfsPrj = "6d8c58bf820d35c347bf4c80b85dfa87";
+
+    Mixpanel.getMixpanelConfig = function (namespace, trackPageView) {
+        return {
+            cookie_name: "mp_cookie",
+            cross_subdomain_cookie: false,
+            track_links_timeout: 500,
+            upgrade: true,
+            track_pageview: trackPageView,
+//        debug:true,
+            loaded: function(){
+
+                for (var p in mpq.projects) {
+                    if (mpq.projects.hasOwnProperty(p)) {
+                        mpq.projects[p].push(["identify", "37458454"]);
+                    }
+                }
+
+            }
+        };
+    };
+
+    var mpq = new Mixpanel.Manager({
+        'default': mpqMasterPrj,
+        projects: [
+            {
+                token: mpqWebsitePrj,
+                config: Mixpanel.getMixpanelConfig()
+            },
+            {
+                token: mpqSignupPrj,
+                config: Mixpanel.getMixpanelConfig('signup', false),
+                namespace: 'signup'
+            },
+            {
+                token: mpqDashboardPrj,
+                config: Mixpanel.getMixpanelConfig('dashboard', false),
+                namespace: 'dashboard'
+            },
+            {
+                token: mpqOrderPrj,
+                config: Mixpanel.getMixpanelConfig('order', false),
+                namespace: 'order'
+            },
+            {
+                token: mpqBadgesPrj,
+                config: Mixpanel.getMixpanelConfig('badges', false),
+                namespace: 'badges'
+            },
+            {
+                token: mpqDevicesPrj,
+                config: Mixpanel.getMixpanelConfig('devices', false),
+                namespace: 'devices'
+            },
+            {
+                token: mpqSocialFeaturesPrj,
+                config: Mixpanel.getMixpanelConfig('social', false),
+                namespace: 'social'
+            },
+            {
+                token: mpqCWPrj,
+                config: Mixpanel.getMixpanelConfig('corporatewellness', false),
+                namespace: 'corporatewellness'
+            },
+            {
+                token: mpqSfsPrj,
+                config: Mixpanel.getMixpanelConfig('sfs', false),
+                namespace: 'sfs'
+            }
+        ]
+    });
+
+
+    (function() {
+        for (var p in mpq.projects) {
+            if (mpq.projects.hasOwnProperty(p)) {
+                mpq.projects[p].push(["register", {"Locale": "HK"}, "all", 90]);
+            }
+        }
+    })();
+
+
+    (function () {
+        mpq.registerProject({
+            token: mpqMasterPrj,
+            config: Mixpanel.getMixpanelConfig('master', false),
+            namespace: 'master'
+        });
+
+        var props = {"Environment":"prod","Logged In":false};
+        var userAgent = new UAParser(),
+                os = userAgent.getOS(),
+                osVersion = [os.name, os.version].join(' ');
+
+        props['Platform'] = 'Web';
+        props['Locale'] = 'en_HK';
+        props['Operating System Version'] = osVersion;
+
+        mpq.getProject(mpqMasterPrj).push(['register', props]);
+    })();
+
+    fitbit.loadInlineScript(function () {
+
+
+        $(function () {
+
+            mpq.push(["track", "User Retention", { "token": mpqWebsitePrj }]);
+
+            mpq.push(["track_links",
+                "a#mpq-link-cart-Header",
+                "OrderCart: Start",
+                {
+                    "!SOURCE": "Header",
+                    "!PAGE": document.location.pathname,
+                    "token": mpqMasterPrj
+                }
+            ]);
+            mpq.push(["track_links",
+                "a#mpq-link-cart-Footer",
+                "OrderCart: Start",
+                {
+                    "!SOURCE": "Footer",
+                    "!PAGE": document.location.pathname,
+                    "token": mpqMasterPrj
+                }
+            ]);
+            mpq.push(["track_links",
+                "li.mpq-link-cart-MainMenu a",
+                "OrderCart: Start",
+                {
+                    "!SOURCE": "Main Menu",
+                    "!PAGE": document.location.pathname,
+                    "token": mpqMasterPrj
+                }
+            ]);
+
+
+
+
+            mpq.push(["track_forms", ".cart_form", "OrderCart: Next", function () {
+                var source = "Payment Form";
+
+                if ($('ul.errorList li').size()) {
+                    source += " - Errors"
+                }
+                return {
+                    "!SOURCE": source,
+                    "!PAGE": document.location.pathname,
+                    "token": mpqMasterPrj
+                };
+            }]);
+
+
+            $("#you_might_like .add").click(function () {
+
+                // TODO: should thie be in mixPanelCart.jsp?
+                var promoCode = $(".empty_cart").eq(0).attr("data-promo-code") || undefined;
+                var hasPromo = "NO";
+                if (undefined != promoCode) {
+                    hasPromo = "YES";
+                }
+                console.debug("Added " + $(this).attr('data-product-id') + " with code " + hasPromo);
+                mpq.push(["track",
+                    "OrderCart:  xSell Click",
+                    {
+                        "!PRODUCT": $(this).attr('data-product-id'),
+                        "!PROMOCART": hasPromo,
+                        "!PAGE": document.location.pathname,
+                        "token": mpqMasterPrj
+                    }
+                ]);
+            });
+
+            $(".orderSummary").find("input[type=submit].right").click(function () {
+                mpq.push(["track",
+                    "OrderCart: PlaceOrder",
+                    {
+                        "!SOURCE": "Order Confirmation Form",
+                        "!PAGE": document.location.pathname,
+                        "token": mpqMasterPrj
+                    }
+                ]);
+            });
+
+
+
+        });
+
+    });
+</script>
+
+<script type="text/javascript">
+    (function(){
+        var oauthSet = {
+            '!OAUTH_APP_NAME': 'Fitbit for iPhone"/>',
+            '!OAUTH_APP_ID': '228TSL',
+
+            '!SOURCE': 'Web',
+            'token': mpqMasterPrj
+        };
+        mpq.push(['track_links',
+            '.promo-details a',
+            'OAuth: Learn more',
+            oauthSet
+        ]);
+        $(".access-flag").one("click", function(){
+            mpq.push(['track',
+                'OAuth: Permissions description',
+                oauthSet
+            ]);
+        });
+    })();
+</script>
+
+</body>
+</html>

@@ -12,6 +12,7 @@ module.exports = {
     saveData: function * (next) {
         try {
             this.body = yield RecordService.saveData(this)
+            console.log(this)
         } catch (ex) {
             this.body = ex
         }
@@ -19,6 +20,7 @@ module.exports = {
     getData: function * () {
         try {
             this.body = yield RecordService.getData(this.params.id)
+            console.log(this)
         } catch (ex) {
             this.body = ex
         }

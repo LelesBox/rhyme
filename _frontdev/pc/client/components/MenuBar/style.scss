@@ -1,0 +1,51 @@
+$themeColor: #00AEDE;
+.menu {
+  position: fixed;
+  height: 100%;
+  // width: 40%;
+  // background-color: #00AEDE;
+  top: 0;
+  left: 0;
+  // background-color: #000;
+  // transition: width 0.3s ease-out;
+}
+.leftmenu {
+  background-color: $themeColor;
+  position: fixed;
+  height: 100%;
+  width: 7%;
+  .itemContainer {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    li {
+      list-style: none;
+      color: #fff;
+      margin: 0 0 60px;
+      padding: 0;
+      width: 100%;
+      cursor: pointer;
+    }
+    i {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+.rightmenu {
+  opacity: 0;
+  background-color: $themeColor;
+  // background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 7%;
+  height: 100%;
+  // width: 33%;
+  width: 0;
+  z-index: 999;
+}

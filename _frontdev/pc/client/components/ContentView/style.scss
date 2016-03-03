@@ -1,0 +1,61 @@
+.container {
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.profile {
+  height: 50px;
+  .avatar {
+    display: block;
+    position: relative;
+    float: left;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+  .author {
+    float: left;
+    height: 100%;
+    width: 80%;
+    position: relative;
+    padding: 0 0 0 10px;
+    .name {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  .authorname,
+  .tag {
+    color: #02AB6C;
+  }
+  .in{
+    color:#BCBCBC;
+  }
+  .time{
+    color:#939393;
+  }
+}
+.image {
+  height: 50%;
+  width: 100%;
+}
+.title {
+  height: 10%;
+  font-size: 28px;
+  padding-top:10px;
+  font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  cursor:pointer;
+}
+.summary {
+  max-height: 25%;
+  padding-top: 10px;
+  font-size: 15px;
+  font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  color: #8f8f8f;
+  overflow: hidden;
+  cursor:pointer;
+}

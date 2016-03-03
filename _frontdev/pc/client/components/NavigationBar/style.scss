@@ -1,0 +1,40 @@
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-table; }
+// 左偏移7%
+
+.container {
+  width: 100%;
+  height: 60px;
+  word-wrap: break-word;
+  border-bottom: 2px solid #d9d9d9;
+  .navigateUl {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    @extend .clearfix;
+    li {
+      padding: 0;
+      margin:0;
+      height: 60px;
+      float: left;
+      list-style: none;
+      padding: 10px 20px;
+      line-height: 38px;
+      cursor:pointer;
+      &:hover{
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+.naviSelect{
+  border-bottom: 2px solid #000;
+}
