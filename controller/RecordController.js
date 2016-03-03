@@ -24,8 +24,5 @@ module.exports = {
         } catch (ex) {
             this.body = ex
         }
-    },
-    test: function * () {
-        return this.response.body = "TEST OK!"
     }
 }

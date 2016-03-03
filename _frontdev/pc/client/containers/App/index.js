@@ -20,7 +20,7 @@ class App extends Component {
       <div className={style.content}>
         <div className={style.rightContent}>
           <div className={style.rightContentContainer}>
-            <NavigationBar {...navi} actions={naviActions}></NavigationBar>
+            {/*<NavigationBar {...navi} actions={naviActions}></NavigationBar>*/}
             {children}
           </div>
         </div>

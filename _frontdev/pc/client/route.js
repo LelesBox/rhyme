@@ -7,6 +7,9 @@ import {
 const config = [{
   path: '/',
   component: App,
+  indexRoute: {
+    component: Article
+  },
   childRoutes: [{
     path: 'article',
     component: Article

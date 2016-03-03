@@ -1,6 +1,7 @@
 /**
  * Created by blake on 12/31/15.
  */
+'use strict'
 var koa = require('koa')
 var fs = require('fs')
 var co = require('co')
@@ -159,6 +160,15 @@ function boot(app) {
                 app.use(passport.session())
             }
         }
+        //启动简单路由,既路由写在controller上,,且覆盖router文件夹定义路由规则
+        /**
+         * module.exports = {
+         *  "get /hook/:id": function *() {
+         *        this.body = "hello test"
+         *       }
+         *   }
+         */
+        scanSimpleRouter(app)
         //启动路由
         scanRouter(app)
         //如果带上connection参数则表示启用数据库
@@ -195,6 +205,7 @@ function scanRouter(app) {
     porps.push(rhyme.router)
     //把router子文件夹里的index也提升到该文件夹的根目录
     // 比如,test文件夹下啊index.js定义的 'get /a':'test.s',此时访问路径应该是 /test/a
+    var porp;
     while (porp = porps.shift()) {
         if (!porp) break
         for (key in porp) {
@@ -310,6 +321,32 @@ function scanConfig() {
     for (var key in rhyme.config.env[rhyme.env]) {
         if (hasPorp(rhyme.config.env[rhyme.env], key)) {
             rhyme.config[key] = rhyme.config.env[rhyme.env][key]
+        }
+    }
+}
+
+//简单路由啊
+function scanSimpleRouter(app) {
+    for (var controller in rhyme.controller) {
+        if (hasPorp(rhyme.controller, controller))
+            f(rhyme.controller[controller])
+    }
+    function f(controller) {
+        for (var c in controller) {
+            if (hasPorp(controller, c)) {
+                if (typeof controller[c] === 'function') {
+                    if (c.indexOf(" ") > -1) {
+                        var p = c.split(" ")
+                        var url = p[1]
+                        var method = p[0]
+                        var fn = controller[c]
+                        router[method].apply(router, [url, koaBody, fn])
+                        app.use(router.routes());
+                    }
+                } else if (typeof controller[c] === 'object') {
+                    f(controller[c])
+                }
+            }
         }
     }
 }
