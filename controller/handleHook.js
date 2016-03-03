@@ -12,7 +12,7 @@ module.exports = {
         console.log("request")
         console.log(this.request)
         console.log("body")
-        console.log(this.request.body)
+        console.log(JSON.stringify(this.request.body))
         this.body = "hello test"
     }
 }
